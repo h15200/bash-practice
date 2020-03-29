@@ -1,0 +1,5 @@
+#!/bin/bash
+
+while read line; do 
+  if [[ $line =~ \([0-9]{3}\)\ [0-9]{3}\-[0-9]{4}|[0-9]{3}\-[0-9]{3}\-[0-9]{4} ]]; then echo yes; else echo $line; fi
+done < text.txt
